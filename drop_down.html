@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dropdown Menu Examples</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+  <h1>A simple dropdown menu</h1>
+  We can create a div with the <a href="http://getbootstrap.com/components/#btn-dropdowns">class "dropdown"</a> to create a dropdown menu. Within this div we nest a button with the "data-toggle" attribute set to "dropdown" to create the menu trigger, and an unordered list with the class "dropdown-menu" to create the actual menu.
+  <div class="dropdown">
+    <a href="#" data-toggle="dropdown">
+      My First Menu
+    </a>
+    <!--Button For Menu Trigger-->
+    <ul class="dropdown-menu">
+      <li><a href="http://google.com">Google</a></li>
+      <li><a href="http://en.wikipedia.com">Wikipedia</a></li>
+    </ul>
+    <!--List to define menu-->
+  </div>
+  The above code makes a working list, but it won't be very useful for users with visual disabilities. To ensure our code is accessible we add some "aria" (accessible rich internet application) attributes to make things accessible.
+  <div class="dropdown">
+    <a href="#" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="true" id="dropdownMenu1">
+      An Accessible Menu
+    </a>
+    <!--Button For Menu Trigger-->
+    <ul class="dropdown-menu" aria-labelled-by="dropdownMenu1">
+      <li><a href="http://google.com">Google</a></li>
+      <li><a href="http://en.wikipedia.com">Wikipedia</a></li>
+    </ul>
+    <!--List to define menu-->
+  </div>
+  Our dropdown menu can use any button class you like.
+  <div class="dropdown">
+    <a href="#" class="btn btn-default" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="true" id="dropdownMenu1">
+      Default Button Style Menu
+    </a>
+    <!--Button For Menu Trigger-->
+    <ul class="dropdown-menu" aria-labelled-by="dropdownMenu1">
+      <li><a href="http://google.com">Google</a></li>
+      <li><a href="http://en.wikipedia.com">Wikipedia</a></li>
+    </ul>
+    <!--List to define menu-->
+  </div>
+  Use the <a href="http://getbootstrap.com/components/#navbar">"navbar" class</a> to make dropdowns pretty and keep multiple dropdowns organized.
+
+  <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="droptown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu One <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://copyvillain.org">Copyvillain</a></li>
+              <li><a href="http://getbootstrap.com/components/#navbar">Bootstrap Docs</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu Two <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="fixed-grid.html">Fixed Example</a></li>
+              <li><a href="fluid-grid.html">Fluid Example</a></li>
+            </ul>
+          </li>
+        </ul>
+  </nav>
+</div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

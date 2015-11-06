@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Simplest Possible Javascript</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!--Additional Stylesheet-->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Simplest Possible Javascript</h1>
+      <p>Javascript is a simple programming language that can run inside the web-browser. This means that javascript can be used to create simple (or, increasingly, not-so-simple), programs that run inside of a web-page.</p>
+      <p>Javascript programs wait for triggers from the user to run. For example, the script on this page uses the "onclick" trigger to trigger a simple alert when the user clicks the link below.</p>
+      <button class="btn btn-primary" id="demoButton" href="javascript:void(null)">Click Me!!</button>
+      <button class="btn btn-primary" href="javascript:void(null)">Another Button</button>
+      <script type="text/javascript">
+        var demoButton = document.getElementById("demoButton");
+        demoButton.onclick = function(){
+          alert("You Pressed The Button!!");
+        };
+      </script>
+</body>
+</html>

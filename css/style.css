@@ -1,0 +1,19 @@
+.container {
+  background-color: AntiqueWhite;
+}
+
+.container-fluid {
+  background-color: AntiqueWhite;
+}
+
+.row {
+  border: solid 1px red;
+}
+
+.col-md-4 {
+  background-color: cyan;
+}
+
+.fixed-height {
+  height: 150px;
+}
